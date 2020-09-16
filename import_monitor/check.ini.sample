@@ -1,0 +1,34 @@
+[DEFAULT]
+pathalertfile = /home/afs/core/logs/
+
+[folder_1]
+;monitor for folder containing initial files received from Captura
+fileextension = *.csv
+path = /home/afs/proc-prior/
+filesnumber = 10
+checkinterval = 10
+alertmessage = Preimport 
+
+[folder_2]
+;monitor folder containing files not processed by AFS before
+fileextension = *.csv
+path = /home/cdrusr_new/
+filesnumber = 50
+checkinterval = 30
+alertmessage = New files
+
+[folder_3]
+;monitor folder containing files processed by AFS before
+fileextension = *.csv
+path = /home/cdrusr_old/
+filesnumber = 150
+checkinterval = 30
+alertmessage = Old files
+
+[folder_4]
+;monitorin import settings folder
+fileextension = *.csv
+path = /home/setimporter/import/newfiles/
+filesnumber = 1
+checkinterval = 10
+alertmessage = Import settings
